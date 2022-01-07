@@ -1,4 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
 *{
     margin: 0%;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.trending{
+    background-color: #22254b;
+
+}
+.movie{
+    background-color: #373b69;
+    width:290px;
+    margin: 1rem;
+    overflow: hidden;
+    border-radius: 2px;
+    position: relative;
+
+}
+.movie img{
+       max-width: 100%; 
+}
+.header{
+    position: relative;
+
+    background-color:#22254b;
+ /* padding-top: 120px; */
+}
+.movie-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #22254b;
+}
+.movie-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    color : white;
+
+}
+
+.movie-info h3{
+    margin: 0;
+}
+
+.movie-hover{
+    background-color: white;
+    color :#22254b;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    max-height: 100%;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.movie:hover .movie-hover{
+    transform: translateY(0%);
+}
+
+.tag{
+    background-color: #22254b;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+.tag.green{
+    color: green;
+}
+
+.tag.orange{
+    color: orange;
+}
+.tag.red{
+    color: red;
+}
+
+.root{
+    display: flex;
+    flex-direction: column;
+}
+
+.submit{
+    background-color: #22254b;
+    color: burlywood;
+    border: 2px solid black;
+    border-radius: 12px;
+    transition-duration: 0.4s; 
+    margin: 1rem;
+    font-size: 25px;
+    padding: 1px;
+    padding-right: 1px;
+}
+.submit:hover {
+    background-color: black; /* Green */
+    color: white;
+
+  }
+
+label{
+    font-size: 3em;
+    font-style: oblique;
+    font-family: 'Comforter Brush', cursive;
+    margin: 1rem;
+    color:burlywood;
+
+}
+.weak{
+    font-size: 2em;
+    font-style: oblique;
+    margin: 1rem;
+    color:burlywood;
+    font-family: 'Open Sans', sans-serif;
+}
+select {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -webkit-padding-end: 20px;
+    -moz-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    -moz-padding-start: 2px;
+    background-color: #22254b;
+    color: aliceblue;
+    border: 1px solid #AAA;
+    border-radius: 2px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    color: burlywood;
+    font-size: inherit;  
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-overflow: ellipsis;
+    white-space: nowrap;  
+}
+.Home
+{
+    position: relative;
+    
 }

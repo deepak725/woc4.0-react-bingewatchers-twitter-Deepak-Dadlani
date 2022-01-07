@@ -8,6 +8,8 @@ export const Nav = styled.nav `
   display: flex;
   justify-content: space-between;
   align-items: center;
+  //  position: fixed;
+  //  width:100%;
   padding: 0.5rem calc((100vw - 1000px) / 2);
   z-index: 10;
   /* Third Nav */
