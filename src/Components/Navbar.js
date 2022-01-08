@@ -9,7 +9,7 @@ const Navbar = () => {
           <NavLink to='/' activeStyle> BingeWatcher </NavLink> 
           <NavLink to='/Trending' activeStyle> Trending </NavLink>
           <NavLink to='/profile' activeStyle> Profile </NavLink>   
-          <NavLink2 to='/sign-up' activeStyle> Sign Up  </NavLink2>  
+          <NavLink to='/sign-up' activeStyle> Sign Up  </NavLink>  
         
          </NavMenu> 
       

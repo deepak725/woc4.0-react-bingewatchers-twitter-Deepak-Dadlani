@@ -14,6 +14,15 @@ export const Nav = styled.nav `
   z-index: 10;
   /* Third Nav */
    justify-content: flex-start; 
+
+   @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction : column;
+    font-size:5px;
+    align-items:center;
+    justify-content : space-between;
+    height : 100px;
+  }
 `;
 export const NavLink = styled(Link)`
   color: #fff;
@@ -31,24 +40,16 @@ export const NavLink = styled(Link)`
     background-size: 600px 100px;
 
   }
-`;
-export const NavLink2 = styled(Link)`
-  color:  #fff;
-  display: flex;
-  align-items: right;
-  text-decoration: none;
-  padding: 0 1rem;
-  margin-right : 240px;
-  height: 100%;
-  cursor: pointer;
-  font-size:30px;
-  justify-content : flex-end;
-  &.active {
-    color: black;
-    background-color: white;
-    background-size: 600px 100px;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction : column;
+    font-size:20px;
+    align-items:center;
+    justify-content : center;
+    margin : 2px;
   }
 `;
+
 
 export const Bars = styled(FaBars)`
   display: none;
@@ -73,7 +74,11 @@ export const NavMenu = styled.div`
   /* width: 100vw;
   white-space: nowrap; */
   @media screen and (max-width: 768px) {
-    display: none;
+    display: flex;
+    flex-direction : column;
+    font-size:5px;
+    align-items:center;
+    justify-content : space-between;
   }
 `;
 

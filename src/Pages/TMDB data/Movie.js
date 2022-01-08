@@ -15,6 +15,7 @@ const setVoteClass = (vote) => {
 
 const Movie = ({title,poster_path,overview,vote_average}) => {
     return(
+        
     <div className="movie">
            <img src={Img_Api + poster_path} alt = {title} />
            <div className="movie-info">
