@@ -41,7 +41,7 @@ const Trending = () => {
     <>
     <div className='header'>
        
-          <label for="category">Category:</label>
+          <label className="trending-label" for="category">Category:</label>
           <input type="radio" name="value" onClick={handleOnSubmit} id="one" /><label className="week">Week</label> 
           
           <input type="radio" name="value" onClick={handleOnSubmit2} id="two" /><label className='week' id="Day">Day</label>

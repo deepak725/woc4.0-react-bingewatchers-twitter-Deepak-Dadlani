@@ -50,6 +50,12 @@ export const NavLink = styled(Link)`
   }
 `;
 
+export const NavLink2 = styled(Link)`
+  color: #fff;
+  display: flex;
+  float:right;
+  }
+`;
 
 export const Bars = styled(FaBars)`
   display: none;

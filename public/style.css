@@ -2,6 +2,7 @@
 *{
     margin: 0%;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    
 }
 
 .trending{
@@ -9,6 +10,7 @@
 
 }
 .movie{
+    
     background-color: #373b69;
     width:290px;
     margin: 1rem;
@@ -22,12 +24,11 @@
 }
 .header{
     position: relative;
-
     background-color:#22254b;
- /* padding-top: 120px; */
 }
 .movie-container
 {
+    
     display: flex;
     flex-wrap: wrap;
     background-color: #22254b;
@@ -101,7 +102,7 @@
 
   }
 
-label{
+.trending-label{
     font-size: 3em;
     font-style: oblique;
     font-family: 'Comforter Brush', cursive;
@@ -142,3 +143,183 @@ select {
     position: relative;
     
 }
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 30px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  
+  .topnav-right {
+    float: right;
+  }
+
+  
+  .signupFrm
+  {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    font-family: "lato", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .form {
+    background-color: white;
+    width: 400px;
+    border-radius: 8px;
+    padding: 20px 40px;
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+  }
+  
+  .title {
+    font-size: 50px;
+    margin-bottom: 50px;
+    cursor: pointer;
+  }
+  .title2{
+    font-size: 40px;
+    margin-bottom: 50px;
+    cursor: pointer;
+  }
+  .inputContainer {
+    position: relative;
+    height: 45px;
+    width: 90%;
+    margin-bottom: 17px;
+  }
+  .input {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #DADCE0;
+    border-radius: 7px;
+    font-size: 16px;
+    padding: 0 20px;
+    outline: none;
+    background: none;
+    z-index: 1;
+  }
+  
+  /* Hide the placeholder texts (a) */
+  
+  ::placeholder {
+    color: transparent;
+  }
+
+    .label {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        padding: 0 4px;
+        background-color: white;
+        color: #DADCE0;
+        font-size: 16px;
+        transition: 0.5s;
+        z-index: 0;
+      }
+ 
+      .submitBtn {
+        display: block;
+        margin-left: auto;
+        padding: 15px 30px;
+        border: none;
+        background-color: #22254b;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 30px;
+      }
+      
+      .submitBtn:hover {
+        background-color: #373b69;
+        transform: translateY(-2px);
+      }
+
+     
+
+      .input:focus + .label {
+        top: -7px;
+        left: 3px;
+        z-index: 10;
+        font-size: 14px;
+        font-weight: 600;
+        color: #373b69;
+      }
+      .input:focus {
+        border: 2px solid #373b69;
+      }
+      .input:not(:placeholder-shown)+ .label {
+        top: -7px;
+        left: 3px;
+        z-index: 10;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+
+.google-btn {
+  width: 184px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 110px;
+  margin-top: 10px;
+  border-radius: 2px;
+  box-shadow: 0 3px 4px 0 rgba(0,0,0,.25);
+  cursor: pointer;
+}
+  .google-icon-wrapper {
+    position: absolute;
+    margin-top: 1px;
+    margin-left: 1px;
+    width: 40px;
+    height: 40px;
+    border-radius: 2px;
+    background-color: #fff;
+  }
+  .google-icon {
+    position: absolute;
+    margin-top: 11px;
+    margin-left: 11px;
+    width: 18px;
+    height: 18px;
+  }
+  .btn-text {
+    float: right;
+    margin: 15px 15px 0 0;
+    color: #22254b;
+    font-size: 12px;
+    letter-spacing: 0.2px;
+    font-family: "Roboto";
+    
+  }
+  .google-btn:active {
+    background:  #1669F2;
+  }
+.forgotpass
+{
+    float: right;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:500);
