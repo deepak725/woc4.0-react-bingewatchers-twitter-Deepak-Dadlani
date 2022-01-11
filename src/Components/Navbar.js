@@ -1,14 +1,17 @@
 
-import { Nav, NavBtn, NavMenu, NavLink, NavLink2, NavMenu2 } from './NavElements'
+import { useAuth } from "../Context/AuthContext"
 const Navbar = () => {
+    const { logout, currentUser } = useAuth()
     return (
         <>
             <div className="topnav">
                 <a  href="/">Home</a>
                 <a href="/Trending">Trending</a>
-                <a href="/Profile">Profile</a>
+                {currentUser &&  <a href="/Profile">Profile</a> }
                 <div className="topnav-right">
-                    <a href="/sign-up">Sign-up</a>
+                 {!currentUser &&   <a href="/sign-up">Sign-up</a> }
+                 {currentUser &&   <a href='/logout' class='logout'>logout</a> }
+                  
                 </div>
             </div>
 

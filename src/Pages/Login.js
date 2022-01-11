@@ -17,8 +17,9 @@ const Login = () => {
             e.preventDefault()
             console.log(email, password)
             login(email, password)
-              .then((response) => console.log(response),
-              navigate("/")
+              .then((response) => 
+              {console.log(response) 
+              navigate("/")}
               )
               .catch((error) => console.log(error.message))
           }}
