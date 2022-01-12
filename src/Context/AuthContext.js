@@ -5,8 +5,12 @@ import { createUserWithEmailAndPassword ,
         onAuthStateChanged,
         signOut,
         GoogleAuthProvider,
-        signInWithPopup
+        signInWithPopup,
+        updateProfile 
 } from 'firebase/auth'
+
+import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
+
 const AuthContext = createContext({
     currentUser:null,
     register : () => Promise,
@@ -63,3 +67,19 @@ export default function AuthContextProvider({children})
                {children} 
         </AuthContext.Provider>
 }
+const storage = getStorage();
+
+export async function upload(file, currentUser, setLoading) {
+    const fileRef = ref(storage, currentUser.uid + '.png');
+    
+    setLoading(true);
+    
+    const snapshot = await uploadBytes(fileRef, file);
+    console.log(snapshot.metadata);
+    const photoURL = await getDownloadURL(fileRef);
+  
+    updateProfile(currentUser, {photoURL});
+    
+    setLoading(false);
+    alert("Uploaded file!");
+  }

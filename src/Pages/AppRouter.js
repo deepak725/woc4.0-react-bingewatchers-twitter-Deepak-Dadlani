@@ -11,7 +11,7 @@ import ForgotPassword from "../Pages/ForgotPassword";
 import ProtectedRoute from "../Pages/ProtectedRoute";
 import ProtectedRoute2 from "../Pages/ProtectedRoute2";
 import ErrorPage from "./ErrorPage";
-
+import EditProfile from "./EditProfile";
 const AppRouter = () => {
     return (
         <Router>
@@ -28,6 +28,7 @@ const AppRouter = () => {
                     <Route exact path="/Login" element={<Login />} />
                 </Route>
                 <Route exact path="/Forgot-Password" element={<ForgotPassword />} />
+                <Route exact path="/Edit-profile" element={<EditProfile />} />
                 <Route exact path="*" element={<ErrorPage />} />
 
             </Routes>

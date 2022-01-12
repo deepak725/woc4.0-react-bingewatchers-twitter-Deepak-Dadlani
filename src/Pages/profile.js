@@ -2,12 +2,20 @@ import React from 'react'
 import { useAuth } from '../Context/AuthContext';
 const Profile = () => {
   const {currentUser} = useAuth();
+  let name;
+  if (currentUser !== null) {
+    currentUser.providerData.forEach((profile2) => {
+      
+      name = profile2.displayName
+     
+    })
+  }
     return (
        
       <div className='profile'>
         
-        <br/>
-        <p>{JSON.stringify(currentUser,null,2)}</p>
+       <p>{name}</p>
+        <a href='/edit-profile'>Edit</a>
       </div>
     );
   };

@@ -186,15 +186,15 @@ select {
 
   .form {
     background-color: white;
-    width: 400px;
+    width: 300px;
     border-radius: 8px;
     padding: 20px 40px;
     box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
   }
   
   .title {
-    font-size: 50px;
-    margin-bottom: 50px;
+    font-size: 30px;
+    margin-bottom: 30px;
     cursor: pointer;
   }
   .title2{
@@ -328,4 +328,21 @@ select {
 .logout{
   color:red;
 }
+
+.Error{
+  color:red;
+  justify-content: center;
+  margin-left: auto;
+  font-weight: bold;
+}
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
+
+.avatar {
+  vertical-align: middle;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border-width: 5px;
+  border-color: gray;
+  border-style: outset;
+}

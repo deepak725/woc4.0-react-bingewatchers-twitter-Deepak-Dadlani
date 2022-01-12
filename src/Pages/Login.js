@@ -6,7 +6,7 @@ import { useAuth } from '../Context/AuthContext';
 const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-
+  const [error1,setError] = useState('')
   const { login } = useAuth()
   let navigate = useNavigate();
   return (
@@ -21,10 +21,12 @@ const Login = () => {
               {console.log(response) 
               navigate("/")}
               )
-              .catch((error) => console.log(error.message))
+              .catch((error) => {
+                setError(error.message)
+                 console.log(error.message)})
           }}
         >
-
+          <p className='Error'>{error1}</p>
           <a href='/Login'> <h1 className="title">Log-In</h1> </a>
 
           <div className="inputContainer">

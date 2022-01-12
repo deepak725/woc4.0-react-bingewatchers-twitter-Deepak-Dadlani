@@ -7,8 +7,10 @@ const SignUp = () => {
   const [password, setPassword] = useState('')
   let navigate = useNavigate();
   const { register, signInWithGoogle } = useAuth()
+  const [error1,setError] = useState('')
   return (
     <>
+    
       <div className="signupFrm">
         <form action="" className="form"
           onSubmit={async e => {
@@ -19,9 +21,13 @@ const SignUp = () => {
                 console.log(response)
                 navigate("/")
               })
-              .catch((error) => console.log(error.message))
+              .catch((error) => {
+               setError(error.message)
+                console.log(error.message)})
           }}
         >
+          
+      <p className='Error'>{error1}</p>
           <a href='/sign-up'> <h1 className="title">Sign up</h1> </a>
 
           <div className="inputContainer">
@@ -66,6 +72,7 @@ const SignUp = () => {
           </div>
         </form>
       </div>
+      
     </>
 
   );

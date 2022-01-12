@@ -6,9 +6,9 @@ import SignUp from './sign-up'
 const ProtectedRoute2 = () => {
     const { currentUser } = useAuth()
     return (
-        currentUser ? <Home/>: <Outlet/> 
+        currentUser ? <Home /> : <Outlet />
 
-        
+
     )
 }
 
