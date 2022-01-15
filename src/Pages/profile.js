@@ -1,15 +1,17 @@
-import React from 'react'
+import React, { useState,useEffect } from 'react'
 import { useAuth } from '../Context/AuthContext';
 const Profile = () => {
   const {currentUser} = useAuth();
+  //const {name,setName} = useState('');
   let name;
   if (currentUser !== null) {
     currentUser.providerData.forEach((profile2) => {
       
-      name = profile2.displayName
+      name = profile2.displayName;
      
     })
   }
+ 
     return (
        
       <div className='profile'>

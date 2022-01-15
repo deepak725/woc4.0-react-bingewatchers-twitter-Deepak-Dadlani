@@ -34,15 +34,15 @@ const SignUp = () => {
             <input type="email"
               value={email}
               onChange={e => setEmail(e.target.value)}
-              className="input" placeholder="a" required ></input>
-            <label for="" className="label">Email</label>
+              className="input" placeholder='a' required ></input>
+            <label for=""  className="label">Email</label>
           </div>
 
           <div className="inputContainer">
             <input
               value={password}
               onChange={e => setPassword(e.target.value)}
-              type="password" className="input" placeholder="a" required></input>
+              type="password" className="input" placeholder='a' required></input>
             <label for="" className="label">Password</label>
           </div>
           <div>

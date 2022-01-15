@@ -1,8 +1,6 @@
-
 import { initializeApp } from "firebase/app";
-
+import {getFirestore} from "firebase/firestore";
 import{getAuth} from 'firebase/auth'
-
 const firebaseConfig = {
     apiKey: "AIzaSyAjhkbVP8i086eX-ABRUSi-0YoOS-9yq2Y",
     authDomain: "bingewatcher-1df92.firebaseapp.com",
@@ -14,3 +12,5 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 export const auth  = getAuth(app);
+
+export const db = getFirestore();
