@@ -13,6 +13,7 @@ import ProtectedRoute2 from "../Pages/ProtectedRoute2";
 import ErrorPage from "./ErrorPage";
 import EditProfile from "./EditProfile";
 import Test from "./Test";
+import Feed from "./Feed";
 const AppRouter = () => {
     return (
         <Router>
@@ -32,6 +33,7 @@ const AppRouter = () => {
                 <Route exact path="/Edit-profile" element={<EditProfile />} />
                 <Route exact path="*" element={<ErrorPage />} />
                 <Route exact path="/test" element={<Test />} />
+                <Route exact path="/feed" element={<Feed />} />
 
             </Routes>
 
