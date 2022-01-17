@@ -2,7 +2,7 @@ import { Avatar, Button } from '@material-ui/core'
 import React,{ useState} from 'react'
 import { db } from '../Utils/Firebase-init';
 import { useAuth } from '../Context/AuthContext';
-import { doc, setDoc } from "firebase/firestore"; 
+import { doc, setDoc,serverTimestamp } from "firebase/firestore"; 
 
 
 
@@ -41,8 +41,10 @@ function TweetBox() {
             displayName : currentUser.displayName,
             verified: currentUser.emailVerified,
             text: tweetMessage,
-            avatar: value
+            avatar: value,
+            timestamp:serverTimestamp()
           });
+         
           
         
         setTweetMessage("")

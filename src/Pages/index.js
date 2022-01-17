@@ -6,26 +6,27 @@ import { db } from "../Utils/Firebase-init";
 import { collection, query, getDocs } from "firebase/firestore";
 import Feed from "./Feed";
 const Home = () => {
-  const [details, setDetails] = useState([]);
-  const userData = async () => {
-    const q = query(collection(db, "posts"));
+  // const [details, setDetails] = useState([]);
+  // const userData = async () => {
+  //   const q = query(collection(db, "posts"));
 
-    const querySnapshot = await getDocs(q);
-    const data = querySnapshot.docs.map((doc) => ({
-      // doc.data() is never undefined for query doc snapshots
-      ...doc.data(),
-      id: doc.id,
-    }));
-    setDetails(data);
-  };
-  console.log(details);
-  useEffect(() => {
-    userData();
-  }, [details]);
+  //   const querySnapshot = await getDocs(q);
+  //   const data = querySnapshot.docs.map((doc) => ({
+  //     // doc.data() is never undefined for query doc snapshots
+  //     ...doc.data(),
+  //     id: doc.id,
+  //   }));
+  //   setDetails(data);
+  // };
+  // console.log(details);
+  // useEffect(() => {
+  //   userData();
+  // }, []);
   return (
     <div className="Home">
       <TweetBox />
-      {details.map((post, id) => {
+      <Feed />
+      {/* {details.map((post, id) => {
         return (
           <Post
             key={post.text}
@@ -35,7 +36,7 @@ const Home = () => {
             avatar={post.avatar}
           />
         );
-      })}
+      })} */}
     </div>
   );
 };

@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import {getFirestore} from "firebase/firestore";
 import{getAuth} from 'firebase/auth'
 const firebaseConfig = {
-    apiKey: "AIzaSyAjhkbVP8i086eX-ABRUSi-0YoOS-9yq2Y",
-    authDomain: "bingewatcher-1df92.firebaseapp.com",
-    projectId: "bingewatcher-1df92",
-    storageBucket: "bingewatcher-1df92.appspot.com",
-    messagingSenderId: "1050958792525",
-    appId: "1:1050958792525:web:d90b4868ac90c70842d904" 
+    apiKey: "AIzaSyDYvJmHsl2kJID24yQL76P_4xtLi3ZHoy0",
+    authDomain: "bingewatcher-e6b55.firebaseapp.com",
+    projectId: "bingewatcher-e6b55",
+    storageBucket: "bingewatcher-e6b55.appspot.com",
+    messagingSenderId: "854364648091",
+    appId: "1:854364648091:web:442c293411d89929570c3e"
 };
 
 const app = initializeApp(firebaseConfig);
