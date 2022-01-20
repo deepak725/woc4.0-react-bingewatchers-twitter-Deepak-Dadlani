@@ -9,10 +9,12 @@ import { doc, setDoc,serverTimestamp } from "firebase/firestore";
 function TweetBox() {
     const {currentUser} = useAuth();
     const [tweetMessage, setTweetMessage] = useState("");
+    const [Error, setError] = useState("");
+
     let count = 0;
-   
-  //  const [tweetImage, setTweetImage] = useState("");
-    const value = "https://publicdomainvectors.org/photos/abstract-user-flat-1.png";
+    let avatar;
+//   //  const [tweetImage, setTweetImage] = useState("");
+//     const value = "https://publicdomainvectors.org/photos/abstract-user-flat-1.png";
     // if(currentUser.emailVerified)
     // {
     //     value = currentUser.photoURL;
@@ -23,6 +25,7 @@ function TweetBox() {
        const timestamp = Date.now();
         let displayname = currentUser.displayName+timestamp;
         console.log(displayname);
+        avatar = currentUser.photoURL;
         // db.collection('posts').add({
         //     displayName : currentUser.displayName,
         //     verified: currentUser.emailVerified,
@@ -41,9 +44,14 @@ function TweetBox() {
             displayName : currentUser.displayName,
             verified: currentUser.emailVerified,
             text: tweetMessage,
-            avatar: value,
+            avatar: currentUser.photoURL == null ? "https://publicdomainvectors.org/photos/abstract-user-flat-1.png":currentUser.photoURL,
             timestamp:serverTimestamp()
-          });
+          }).then(function(){
+                console.log("Successfullyy tweeted!");
+          }).catch((error) => {
+           alert('username is not set')
+             })
+       
          
           
         
@@ -51,23 +59,33 @@ function TweetBox() {
  //       setTweetImage("")
     }
 
+    const Message = e => {
+
+        if(currentUser.displayName == null)
+            alert("Username is null");
+
+            Message("Login to tweet");  
+    }
+
     return (
 
         <div className = "tweetBox">
-            <form>
+            <form >
+            <p className='Error'>{Error}</p>
                 <div className = "tweetBox__input">
                     <Avatar
-                        src = "https://pbs.twimg.com/profile_images/1266938830608875520/f-eajIjB_400x400.jpg"
+                       src = {currentUser ? currentUser.photoURL == null ? "https://publicdomainvectors.org/photos/abstract-user-flat-1.png":currentUser.photoURL: "https://publicdomainvectors.org/photos/abstract-user-flat-1.png" }
                     />
                     <input 
                         onChange = {(e) => setTweetMessage(e.target.value)}
                         value = {tweetMessage} 
                         placeholder = "What's happening?" 
                         type = "text" 
+                        required
                     />
                 </div>
               
-               <input type="submit" onClick={sendTweet} className='tweetBox__tweetButton' value={'Tweet'}></input>
+               <input type="submit"  onClick={tweetMessage == ""?Message: sendTweet} className='tweetBox__tweetButton' value={'Tweet'}></input>
             </form>
         </div>
     )

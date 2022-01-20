@@ -78,7 +78,6 @@ function handleClick(e) {
             <br></br>
             <hr />
             <br />
-            <a href='/login'>Login</a> 
           </div>
         </form>
       </div>
