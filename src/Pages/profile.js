@@ -9,12 +9,13 @@ const Profile = () => {
   if (currentUser !== null) {
     currentUser.providerData.forEach((profile2) => {
       
-      name = profile2.displayName;
+     
       email = profile2.email;
       avatar = profile2.photoURL;
+      console.log(profile2);
     })
   }
- 
+  name = currentUser.displayName;
     return (
        
       <div className='signupFrm'>

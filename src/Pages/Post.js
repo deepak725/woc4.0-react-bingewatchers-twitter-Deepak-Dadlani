@@ -21,13 +21,10 @@ const  Post = forwardRef(
             <div className = "post__body">
                 <div className = "post__header">
                     <div className = "post__headerText">
-                    
-                       
                             <span className = "post__headerSpecial">
                                 {verified && <MdVerified />}
-                                @{displayName}
+                               <a href='/' className='displayname' > @{displayName} </a>
                             </span>
-                    
                     </div>
                     <div className = "post__headerDescription">
                         <p>{text}</p>

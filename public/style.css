@@ -491,3 +491,7 @@ select {
   flex-direction: row;
    padding: 10px;
  }
+
+.displayname{
+  text-decoration: none;
+}
