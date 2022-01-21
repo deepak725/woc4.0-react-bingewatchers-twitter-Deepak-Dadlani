@@ -45,7 +45,9 @@ function TweetBox() {
             verified: currentUser.emailVerified,
             text: tweetMessage,
             avatar: currentUser.photoURL == null ? "https://publicdomainvectors.org/photos/abstract-user-flat-1.png":currentUser.photoURL,
-            timestamp:serverTimestamp()
+            timestamp:serverTimestamp(),
+            uid:currentUser.uid,
+            
           }).then(function(){
                 console.log("Successfullyy tweeted!");
           }).catch((error) => {
