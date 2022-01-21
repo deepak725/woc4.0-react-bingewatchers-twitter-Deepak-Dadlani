@@ -15,7 +15,8 @@ const Profile = () => {
       console.log(profile2);
     })
   }
-  name = currentUser.displayName;
+ name = currentUser.displayName;
+   
     return (
        
       <div className='signupFrm'>

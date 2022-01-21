@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '../Context/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import Profile from './profile'
 const SignUp = () => {
 
   const [email, setEmail] = useState('')
@@ -18,8 +19,9 @@ const SignUp = () => {
             //   console.log(email,password)
             register(email, password)
               .then((response) => {
+               
                 console.log(response)
-                navigate("/")
+                navigate("/edit-profile")
               })
               .catch((error) => {
                setError(error.message)
@@ -29,6 +31,7 @@ const SignUp = () => {
           
       <p className='Error'>{error1}</p>
           <a href='/sign-up'> <h1 className="title">Sign up</h1> </a>
+
 
           <div className="inputContainer">
             <input type="email"

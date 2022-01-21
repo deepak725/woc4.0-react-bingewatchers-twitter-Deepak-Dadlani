@@ -63,9 +63,11 @@ function handleClick(e) {
          onSubmit={async e => {
             e.preventDefault()
             //   console.log(email,password)
-            navigate("/profile")
+            navigate("/")
           }}
         >
+            <p className='Error'>{auth.currentUser && auth.currentUser.displayName == null ? "Your user name is not set you will not able to tweet or comment! ":""}</p>
+        
          <a  href='/edit-profile'> <h1 className="title2">Edit-profile</h1> </a>
 
           <div className="inputContainer">
