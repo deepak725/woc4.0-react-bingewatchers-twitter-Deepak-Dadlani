@@ -31,7 +31,7 @@ const AppRouter = () => {
                 </Route>
                 <Route exact path="/Forgot-Password" element={<ForgotPassword />} />
                 <Route exact path="/Edit-profile" element={<EditProfile />} />
-                <Route exact path="*" element={<ErrorPage />} />
+                <Route exact path="/*" element={<ErrorPage />} />
                 <Route exact path="/test" element={<Test />} />
                 <Route exact path="/feed" element={<Feed />} />
 
